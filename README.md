@@ -27,3 +27,15 @@ Aqui cada estudo de caso do SINDy é computado.
 ## utils
 
 Aqui estão scripts auxiliares como os modelos do MOAB, leitura e organização de arquivos CSV em Arrays, etc.
+
+## data
+
+Pasta com conjunto de dados de simulações em .csv para utilizar no algoritmo sindy. Cada vetor de dados se encontra em um csv separado dentro de uma pasta *Batch_#* de acordo com a seguinte estrutura:
+
+- Posição x da bola: *ball_x.csv*
+- Posição y da bola: *ball_y.csv*
+- Velocidade x da bola: *ball_vel_x.csv*
+- Velocidade y da bola: *ball_vel_y.csv*
+- Ângulo theta x da plataforma: *theta_x.csv*
+- Ângulo theta y da plataforma: *theta_y.csv*
+- Tempo: *time.csv*
