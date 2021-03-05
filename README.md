@@ -11,6 +11,14 @@ Como estudo de caso do algoritmo SINDy, diferentes abordagens são realizadas:
 5. Uso de dados da posição da bola (x e y) e da entrada da plataforma (\theta_x e \theta_y) n SINDy Control, e uso das velocidades da simulação.
 6. Uso de dados de um sistema _ball on plate_ real.
 
+# Pacotes necessários
+
+São necessários os seguintes pacotes instalados:
+
+- NumPy
+- Scypy
+- Pysindy
+
 # Organização de pastas
 
 ## utils
