@@ -48,6 +48,11 @@ for i in range(1,10):
 
     fit_moab_sindy(x_train_final,t_train,x_test_final,t_test,u_train=u_train, u_test=u_test)
 
+# Melhor conjunto de dados
+
+print("O Batch 8 do conjunto teve o melhor resultado nos dados.")
+print('\n')
+
 x_train, t_train, u_train, dx_train = dm.read_batch_moab(data_path, 8, reduced = True)
 
 x_train_final = np.zeros((x_train.shape[0],4))
