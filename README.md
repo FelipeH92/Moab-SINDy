@@ -21,10 +21,10 @@ São necessários as seguintes dependências instalados:
 
 # Organização de pastas
 
-## utils
-
-Aqui estão scripts auxiliares como os modelos do MOAB, leitura e organização de arquivos CSV em Arrays, etc.
-
 ## src
 
 Aqui cada estudo de caso do SINDy é computado.
+
+## utils
+
+Aqui estão scripts auxiliares como os modelos do MOAB, leitura e organização de arquivos CSV em Arrays, etc.
