@@ -4,6 +4,13 @@ g = 9.81
 A = 2
 f = 6
 
+theta_ramp_x = 5*np.pi/180
+theta_ramp_y = 5*np.pi/180
+target = 0.5
+
+x_step = theta_ramp_x/target
+y_step = theta_ramp_x/target
+
 def sin6tpi(t, stack = False):
     if stack:
         return np.column_stack((A*np.sin(f*t + np.pi))*np.pi/180)
@@ -13,6 +20,34 @@ def sin6tpi2(t, stack = False):
     if stack:
         return np.column_stack((A*np.sin(f*t + (np.pi/2)))*np.pi/180)
     return (A*np.sin(f*t + (np.pi/2)))*np.pi/180
+
+def ramp_x(t, stack = False):
+    if stack:
+        rampList = []
+        for i in t:
+            if i < target:
+                rampList.append(x_step*i)
+            else:
+                rampList.append(theta_ramp_x)
+        rampList = np.column_stack(np.asarray(rampList))
+        return rampList
+    if t < target:
+        return x_step*t
+    return theta_ramp_x
+
+def ramp_y(t, stack = False):
+    if stack:
+        rampList = []
+        for i in t:
+            if i < target:
+                rampList.append(y_step*i)
+            else:
+                rampList.append(theta_ramp_y)
+        rampList = np.column_stack(np.asarray(rampList))
+        return rampList
+    if t < target:
+        return y_step*t
+    return theta_ramp_y
 
 
 def moab_simplified(f, t, thetaxFunc, thetayFunc):
